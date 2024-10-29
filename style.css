@@ -14,10 +14,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Alinha o conteúdo verticalmente */
-    padding: 20px;
+    padding: 25px;
     position: sticky;
     top: 0px;
-    background-color: #e7e7e0;
+    background-color: #e4e4cf;
 }
 
 header h1 {
@@ -85,7 +85,7 @@ header nav ul li a:hover {
 #imgcasamento #data {
     margin-bottom: 150px;
     font-size: 40px;
-    color: #20201F;
+    color: rgb(214, 213, 167);
 }
 
 #imgcasamento #conhecanos {
@@ -94,7 +94,7 @@ header nav ul li a:hover {
 
 #historia {
     height: 90vh;
-    background-color: rgb(237, 228, 228);
+    background-color: #e4e4cf;
     display: flex;
     justify-content: center;
     align-items: center;

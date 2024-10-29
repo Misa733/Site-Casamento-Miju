@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Garante que o nav ocupe todo o espaço horizontal */
+}
+
+header nav ul {
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0; /* Remove o espaçamento padrão para centralizar melhor */
+}
+
+header nav ul li {
+    margin: 0px 20px;
+    color: black;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: 0.5s ease-in;
+}
+
+header nav ul li a:hover {
+    border-bottom: 1px solid rgb(7, 85, 0);
+}
+
+
+#imgcasamento {
+    height: 90vh;
+    background-image: url(img/banner1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 100px;
+    align-items: center;
+    color: rgb(214, 213, 167);
+    gap: 10px; /* Controla o espaçamento entre os elementos */
+}
+
+#imgcasamento h1, #imgcasamento p {
+    margin: 5px 0; /* Ajusta o espaçamento acima e abaixo dos elementos de texto */
+    padding: 0; /* Remove o padding caso exista */
+}
+
+#imgcasamento h1 {
+    font-family: 'Georgia', serif;
+    font-size: 100px;
+}
+
+#imgcasamento #data {
+    margin-bottom: 150px;
+    font-size: 30px;
+}
+
+#imgcasamento #conhecanos {
+    font-size: 30px;
+}
+
+#historia {
+    height: 90vh;
+    background-color: rgb(237, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fotohistoria,
+#conto {
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#conto h1 {
+    margin-bottom: 30px;
+}
+
+#fotohistoria img {
+    width: 100%;
+    box-shadow: 0px 0px 10px black;
+}
+
+#galeria {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#galeria #container {
+    /* background-color: red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+}
+
+#galeria .foto {
+    height: 200px;
+    margin: 10px 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#galeria .foto img {
+    transition: all 0.5s;
+    height: 100%;
+}
+
+#galeria .foto img:hover {
+    transform: scale(1.1);
+    filter: grayscale(10);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer p {
+    font-size: 20px;
+    line-height: 43px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+footer ul li a {
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#modal_img {
+    width: 80vh;
+}
+
+#bt_close {
+    padding: 0px 10px;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    right: 350px;
+    cursor: pointer;
+}
+
+#bt_close:hover {
+    background-color: rgba(0, 0, 0, 0.501);
+}
+
+.modal_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: gray;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 996px) {
+    #imgcasamento {
+        width: 100%;
+        height: fit-content;
+    }
+
+    #historia {
+        width: 100%;
+        height: fit-content;
+        margin: 10px 0;
+    }
+
+    #galeria {
+        display: flex;
+        width: 100%;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    .foto {
+        display: flex;
+        width: 100%;
+        height: 500px !important;
+        flex-direction: column;
+    }
+
+    .small_img {
+        width: 100%;
+        height: 900px;
+        object-fit: cover;
+    }
+
+
+}
+
+@media (max-width: 330px) {
+    .toggle-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 10vw;
+        cursor: pointer;
+    }
+
+    .toggle-btn span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        top: 30%;
+        transition: .5s;
+    }
+
+    .toggle-btn span:nth-child(2) {
+        top: 70%;
+    }
+
+    .toggle-btn.active span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .toggle-btn.active span:nth-child(2) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+    .links-container {
+        position: absolute;
+        top: 80px;
+        background: #fff;
+        width: 100%;
+        padding: 0 10vw;
+        flex-direction: row;
+        transition: .5s;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .links-container.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    #imgcasamento h1{
+        font-size: 45px;
+        color: #fff;
+    }
+
+    #imgcasamento #data, #imgcasamento #conhecanos {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    #historia {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #conto {
+        margin: 0 auto;
+    }
+
+    #galeria {
+        display: block;
+        width: 100%;
+    }
+
+    #galeria #container {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    #container .foto {
+        display: block;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .small_img {
+        width: 100%;
+    }
+
+    span#topo {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
